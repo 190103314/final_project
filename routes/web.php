@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/timeto', function () {
     return view('index');
 });
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('index');
+});

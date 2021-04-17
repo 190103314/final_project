@@ -24,12 +24,12 @@
         </div>
         <div class="main-nav">
             <ul>
-                <li><a href="#section1">HOME</a></li>
-                <li><a href="#section2" onclick="change2()">TIME TO</a>
-                <li><a href="#section4" onclick="change()">ABOUT US</a></li>
-                <li><a href="#section5">CONTACT</a></li>
-                <li><a href="#">ENG</a></li>
-                <li><a href="#">RU</a></li>
+                <li><a href="#home">{{__('lang.one')}}</a></li>
+                <li><a href="#timeto" onclick="change2()">{{__('lang.two')}}</a>
+                <li><a href="#about" onclick="change()">{{__('lang.three')}}</a></li>
+                <li><a href="#contact">{{__('lang.four')}}</a></li>
+                <li><a href="en">{{__('lang.1')}}</a></li>
+                <li><a href="ru">{{__('lang.2')}}</a></li>
             </ul>
             <div class="profile">
                 <img id="img" title = "Name" src="https://tec-sense.com/wp-content/uploads/2019/09/avtar-man.png" alt="">
@@ -38,45 +38,24 @@
         </div>
     </header>
 
-    <nav id="section1" class='set'>
+    <nav id="home" class='set'>
         <div class="overlay">
             <div class="main_text">
-                <h5>FREE COURSE OF DEVELOPMENT</h5>
-                <h2>IT'S <em>TIME</em> TO</h2>
+                <h5>{{__('lang.five')}}</h5>
+                <h2><em>{{__('lang.six')}}</em></h2>
             </div>
         </div>
     </nav>
 
-   <div class="screen">
-        <div class="screen_content">
-            <img onclick="close_screen()" class="sign" src="icon.png" alt="">
-            <div class="text">
-                <strong><em>TIME</em> TO</strong>
-            </div>
-                
-             <form class="login-form" id="same">
-                <input type="text" placeholder="username" name="username"/>
-                <input type="password" placeholder="password" name="pass"/>
-                <button onclick="login(username.value)">login</button>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
-            </form>
-            <form class="register-form" id="same">
-                <input type="text" placeholder="name"/>
-                <input type="password" placeholder="password"/>
-                <input type="text" placeholder="email address"/>
-                <button>create</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-        </div>
-    </div>
-    <section class="items" id="section2">
+
+    <section class="items" id="timeto">
         <div class="item">
             <div class="card">
                 <img class="card-img-top" src="https://www.scuba-monkey.com/wp-content/uploads/2015/04/planning-graphic.jpg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">PLAN</h4>
-                  <h6 class="card-text">An idiot with a plan can beat a genius without a plan</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                  <h4 class="card-title">{{__('lang.seven')}}</h4>
+                  <h6 class="card-text">{{__('lang.eight')}}</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -84,9 +63,9 @@
             <div class="card">
                 <img class="card-img-top" src="https://i.pinimg.com/originals/48/e7/32/48e732005b1dc9302ae443ced9d4a341.png" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">START</h4>
-                  <h6 class="card-text">The secret to getting ahead is getting started.</h6>
-                  <a  class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                  <h4 class="card-title">{{__('lang.ten')}}</h4>
+                  <h6 class="card-text">{{__('lang.a')}}</h6>
+                  <a  class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -94,9 +73,9 @@
             <div class="card">
                 <img class="card-img-top" src="https://logosrated.net/wp-content/uploads/parser/Challenge-Logo-1.png" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">CHALLENGE</h4>
-                  <h6 class="card-text">The key to failure is trying to please everybody</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                  <h4 class="card-title">{{__('lang.b')}}</h4>
+                  <h6 class="card-text">{{__('lang.c')}}</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -104,21 +83,18 @@
             <div class="card">
                 <img class="card-img-top" src="https://miro.medium.com/max/3828/1*pYwSyihmU20SBdWevafO8Q.jpeg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">GROWTH</h4>
-                  <h6 class="card-text">One can choose to go back toward safety or forward toward growth</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                  <h4 class="card-title">{{__('lang.d')}}</h4>
+                  <h6 class="card-text">{{__('lang.e')}}</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="learn" id="section3">
+    <section class="learn" id="about">
             <div class="col-md-6 align-self-center">
                 <div class="left-content">
-                    <h4>Watch the video to learn more <em>about TIME TO...</em></h4>
-                    <p>It’s easy to have FAITH everything is going to work out, when everything IS working out.
-                    It’s much harder to have faith when you are facing challenges in your life. But that is exactly when you need to apply your faith.
-                    Because faith is believing in the unseen. Faith is taking the first step. Faith is jumping in the deep end and KNOWING everything will be OK. 
-                    <br><br>“I hated every minute of training, but I said, ‘Don’t quit. Suffer now and live the rest of your life a champion.” ~ Muhammad Ali</p>
+                    <h4><em>{{__('lang.3')}}</em></h4>
+                    <p>{{__('lang.4')}}</p>
                 </div>
             </div>
             <div class="col col-md-15 offset-md-4 col-lg-7 offset-lg-0">
@@ -164,10 +140,10 @@
             </div>
     </section>
 
-    <article id="section4">
+    <article id="contact">
         <div class="txt">
-            <h2 id="tag1">WE ARE <em>CHAMPIONS!</em></h2>
-            <h3 id="tag2">be with us in the same wave.</h3>
+            <h2 id="tag1"><em>{{__('lang.5')}}</em></h2>
+            <h3 id="tag2">{{__('lang.6')}}</h3>
         </div>
         <div class="image">
             <img src="http://pngimg.com/uploads/sea/sea_PNG16.png" class="moun">
@@ -182,7 +158,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <fieldset>
-                                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                                    <input name="email" type="text" class="form-control" id="email" placeholder="{{__('lang.9')}}" required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-12">
@@ -192,12 +168,12 @@
                             </div>
                             <div class="col-md-12">
                                 <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="{{__('lang.7')}}" required=""></textarea>
                                 </fieldset>
                             </div>
                             <div class="col-md-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                                    <button type="submit" id="form-submit" class="button">{{__('lang.8')}}</button>
                                 </fieldset>
                             </div>
                         </div>
