@@ -91,7 +91,7 @@ header {
 
 .screen_content{
     background-color: rgba(22,34,57,1);
-    height: 400px;
+    height: 450px;
     width: 450px;
     position: absolute;
     padding: 80px;
@@ -139,9 +139,9 @@ header {
   color:#f5a425;
   text-decoration: none;
 }
-.register-form {
+/* .register-form {
   display: none;
-}
+} */
 .screen form::placeholder { color: #fff }
 .screen form input::placeholder { color: #fff; }
 .screen form input::placeholder { color: #fff; }
@@ -204,6 +204,7 @@ nav{
   object-fit: cover;
 
 }
+
 .main_text{
   left: 50%;
   top: 40%;
@@ -232,7 +233,7 @@ nav{
   transform: translate(-50%,-50%);
   left: 50%;
   top: 55%;
-  width: 120px;
+  width: 200px;
   padding:10px 20px;
   font-size: 15px;
   text-align: center;

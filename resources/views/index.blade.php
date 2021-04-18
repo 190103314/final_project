@@ -43,9 +43,26 @@
             <div class="main_text">
                 <h5>{{__('lang.five')}}</h5>
                 <h2><em>{{__('lang.six')}}</em></h2>
+                
             </div>
+            <button class="main-button" onclick="show()" id="btn">{{__('lang.10')}}</button>
         </div>
     </nav>
+    <div class="screen">
+        <div class="screen_content">
+            <div class="text">
+                <strong><em>{{__('lang.15')}}</em></strong>
+            </div>
+            <form class="register-form" id="same" method="POST" action="{{ route('add-form') }}" enctype="multipart/form-data">
+                @csrf
+                <input type="text" placeholder="{{__('lang.11')}}"/>
+                <input type="text" placeholder="{{__('lang.16')}}"/>
+                <input type="text" placeholder="{{__('lang.12')}}"/>
+                <input type="text" placeholder="{{__('lang.13')}}"/>
+                <button><a href="register">{{__('lang.14')}}</a></button>
+            </form>
+        </div>
+    </div>
 
 
     <section class="items" id="timeto">
@@ -55,7 +72,7 @@
                 <div class="card-body">
                   <h4 class="card-title">{{__('lang.seven')}}</h4>
                   <h6 class="card-text">{{__('lang.eight')}}</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
+                  <a class="btn btn-outline-secondary" href="#learn">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -65,7 +82,7 @@
                 <div class="card-body">
                   <h4 class="card-title">{{__('lang.ten')}}</h4>
                   <h6 class="card-text">{{__('lang.a')}}</h6>
-                  <a  class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
+                  <a  class="btn btn-outline-secondary" href="#learn">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -75,7 +92,7 @@
                 <div class="card-body">
                   <h4 class="card-title">{{__('lang.b')}}</h4>
                   <h6 class="card-text">{{__('lang.c')}}</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
+                  <a class="btn btn-outline-secondary" href="#learn">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
@@ -85,12 +102,12 @@
                 <div class="card-body">
                   <h4 class="card-title">{{__('lang.d')}}</h4>
                   <h6 class="card-text">{{__('lang.e')}}</h6>
-                  <a class="btn btn-outline-secondary" href="#section3">{{__('lang.nine')}}</a>
+                  <a class="btn btn-outline-secondary" href="#learn">{{__('lang.nine')}}</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="learn" id="about">
+    <section class="learn" id="learn">
             <div class="col-md-6 align-self-center">
                 <div class="left-content">
                     <h4><em>{{__('lang.3')}}</em></h4>
@@ -140,7 +157,7 @@
             </div>
     </section>
 
-    <article id="contact">
+    <article id="about">
         <div class="txt">
             <h2 id="tag1"><em>{{__('lang.5')}}</em></h2>
             <h3 id="tag2">{{__('lang.6')}}</h3>
@@ -150,11 +167,12 @@
             <img src="http://pngimg.com/uploads/sea/sea_PNG16.png" class="moun1">
         </div>
     </article>
-    <footer class="contact" id="section5">
+    <footer class="contact" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">         
-                    <form id="contact">
+                    <form id="contact"method="POST" action="{{ route('add-form') }}" enctype="multipart/form-data">
+                    @csrf
                         <div class="row">
                             <div class="col-md-12">
                                 <fieldset>
@@ -173,7 +191,7 @@
                             </div>
                             <div class="col-md-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="button">{{__('lang.8')}}</button>
+                                    <button type="submit" id="form-submit" class="button"><a href="send">{{__('lang.8')}}</a></button>
                                 </fieldset>
                             </div>
                         </div>
