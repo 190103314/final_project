@@ -7,11 +7,9 @@ use App\Models\Register;
 
 class RegisterController extends Controller
 {
-    public function index() {
-        $register = Register::all();
-        return view('index')->with(['registertable' => $register]);
-    }
-    public function uploadsubmit(Request $request) {
+
+
+    public function register(Request $request) {
         $request->validate([
             'name' => 'required',
             'surname' => 'required',
@@ -27,7 +25,7 @@ class RegisterController extends Controller
             'email' => $request->email
         ]);
 
-        return redirect('/register');
+        return redirect('/timeto');
 
     }
 }

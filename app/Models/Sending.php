@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sending extends Model
 {
-    protected $fillable = ['email', 'fileName', 'message'];
-    protected $table = "email";
+    protected $fillable = ['email', 'message', 'photos'];
+    protected $table = "emails";
     use HasFactory;
 }

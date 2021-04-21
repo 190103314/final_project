@@ -8,10 +8,24 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function send(){
-        $objectDemo = new \stdClass();
-        $objectDemo->receiver='Yermon';
-        $objectDemo->sender='Yermakhan';
-        Mail::to('qyermon@gmail.com')->send(new DemoEmail($objectDemo));
+    public function sendEmail(Request $request) {
+        $request->validate([
+            'email' => 'required',
+            'message' => 'required',
+            'photos' => 'required|mimes:jpg,png,jpeg,gif|max:5048'
+            
+        ]);
+        
+        $data = [
+            'email' => $request->email,
+            'message' => $request->message,
+            'photos' => $request->photos
+            
+        ];
+               
+        Mail::to('qyermon@gmail.com')->send(new DemoEmail($data));
+
+        return redirect('/timeto');
+
     }
 }

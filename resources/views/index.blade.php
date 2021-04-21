@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/prob_style.css">
     <script type="text/javascript" src="js/prob.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5d124e77-c58e-41aa-9f61-a41781260b63key&lang=en_US" type="text/javascript">
     </script>
@@ -27,7 +28,7 @@
                 <li><a href="#home">{{__('lang.one')}}</a></li>
                 <li><a href="#timeto" onclick="change2()">{{__('lang.two')}}</a>
                 <li><a href="#about" onclick="change()">{{__('lang.three')}}</a></li>
-                <li><a href="#contact">{{__('lang.four')}}</a></li>
+                <li><a href="{{ route('contact') }}">{{__('lang.four')}}</a></li>
                 <li><a href="en">{{__('lang.1')}}</a></li>
                 <li><a href="ru">{{__('lang.2')}}</a></li>
             </ul>
@@ -45,26 +46,25 @@
                 <h2><em>{{__('lang.six')}}</em></h2>
                 
             </div>
-            <button class="main-button" onclick="show()" id="btn">{{__('lang.10')}}</button>
+            <button class="main-button" id="btn"><a href="{{ route('forms') }}" >{{__('lang.10')}}</a></button>
         </div>
     </nav>
+
     <div class="screen">
         <div class="screen_content">
             <div class="text">
                 <strong><em>{{__('lang.15')}}</em></strong>
             </div>
-            <form class="register-form" id="same" method="POST" action="{{ route('add-form') }}" enctype="multipart/form-data">
+            <form class="register-form" id="same" method="POST" action="{{ route('get-form') }}">
                 @csrf
-                <input type="text" placeholder="{{__('lang.11')}}"/>
-                <input type="text" placeholder="{{__('lang.16')}}"/>
-                <input type="text" placeholder="{{__('lang.12')}}"/>
-                <input type="text" placeholder="{{__('lang.13')}}"/>
-                <button><a href="register">{{__('lang.14')}}</a></button>
+                <input type="text" name="name" placeholder="{{__('lang.11')}}"/>
+                <input type="text" name="surname" placeholder="{{__('lang.16')}}"/>
+                <input type="text" name="phone" placeholder="{{__('lang.12')}}"/>
+                <input type="text" name="email" placeholder="{{__('lang.13')}}"/>
+                <button type='submit'><a href=>{{__('lang.14')}}</a></button>
             </form>
         </div>
     </div>
-
-
     <section class="items" id="timeto">
         <div class="item">
             <div class="card">
@@ -167,38 +167,6 @@
             <img src="http://pngimg.com/uploads/sea/sea_PNG16.png" class="moun1">
         </div>
     </article>
-    <footer class="contact" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">         
-                    <form id="contact"method="POST" action="{{ route('add-form') }}" enctype="multipart/form-data">
-                    @csrf
-                        <div class="row">
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="email" type="text" class="form-control" id="email" placeholder="{{__('lang.9')}}" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input rows="6" class="form-control" type="file" name="photos">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="{{__('lang.7')}}" required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="button"><a href="send">{{__('lang.8')}}</a></button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 </body>
 </html>

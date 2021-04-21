@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SendingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,14 @@ Route::get('/{lang}', function ($lang) {
     App::setlocale($lang);
     return view('index');
 });
-Route::get('/send',[MailController::class, 'send']);
-Route::post('/register', [RegisterController::class, 'uploadsubmit'])->name('add-form');
-Route::post('/send', [SendingrController::class, 'uploadsubmit'])->name('add-form');
+// Route::post('contact/us',[MailController::class, 'sendEmail'])->name('add-form');
+
+Route::post('contact/us', [SendingController::class, 'contact'])->name('add-form');
+Route::get('contact/us', function () {
+    return view('contact');
+})->name('contact');
+
+Route::post('form/register', [RegisterController::class, 'register'])->name('get-form');
+Route::get('form/register', function () {
+    return view('forms');
+})->name('forms');

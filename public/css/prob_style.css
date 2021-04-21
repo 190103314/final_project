@@ -244,8 +244,16 @@ nav{
   border: 0;
   color: #FFFFFF;
   position: absolute;
+  text-decoration: none;
 }
-
+.main-button a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#form-submit a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .text{
   margin-top: -40px;
   color: white;
